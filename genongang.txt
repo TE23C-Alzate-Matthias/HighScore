@@ -1,0 +1,15 @@
+List<string> highScore = [];
+
+highScore.Add("20000 Matthias");
+highScore.Add("15000 Margarita");
+highScore.Add("10000 Markus");
+
+highScore[2] = "10 Markus";
+
+for (int i = 0; i < highScore.Count; i++)
+{
+    Console.WriteLine(highScore[i]);
+}
+
+
+Console.ReadLine();
