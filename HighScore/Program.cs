@@ -44,23 +44,25 @@ for (int i = 0; i < 3; i++)
     Console.WriteLine("Välj Poäng (bara siffor)");
     option2 = Console.ReadLine();
 
+    // checkar att option2 bara har siffor i sig, om inte så ger den false
     allDigits = option2.All(char.IsDigit);
 
     while (allDigits == false)
     {
-        
+        Console.WriteLine("Du har inte valt bara siffror, försök igen");
+        option2 = Console.ReadLine();
+
+        allDigits = option2.All(char.IsDigit);
+
     }
-    
+    Points.Add(option2);
 }
-
-
 
 for (int i = 0; i < Name.Count; i++)
 {
-    Console.Write(Points[i]);
-    Console.Write("  ");
-    Console.WriteLine(Name[i]);
+    Console.WriteLine($"{Points[i]} {Name[i]}");
 }
 
+Console.WriteLine("Nu är programmet slut");
 
 Console.ReadLine();
